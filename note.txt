@@ -1,0 +1,338 @@
+ANGULAR
+
+
+npm- node package manager   npm -v
+
+
+
+instal
+=======
+npm install -g @angular/cli@latest
+
+
+
+projrct cretion
+=============
+ng new projrctname
+
+
+running command
+======
+ng serve --oprn      short(ng s -o)
+
+
+Angular tecnolaogies
+====================
+html
+css
+typescript------stricty typed
+=============
+
+
+transpling == browser  covert ts code to js while running
+
+
+instal nod modules
+=============
+npm i
+
+
+
+browseer list  ===browser configurations
+editer list    ==== editor configurations
+gitignorn ====   to avoid unvanded fiels
+angular.js======= angulaqr project and angular cli configurations
+karma === testing tool
+package lock====package.json nthe lock filr
+package.json === therd party liabrARYS maintain cheyyan
+readme=== like a text fiels
+ts fiels=======ts and projectum thammil ulla connections
+node modules=====use cheyyunna package ands module copy 
+src===========   
+
+
+root module
+==========
+root component
+we can create sub component inside the root module
+
+sub modules
+=========
+components
+..........
+module ts fiels  manages all the components inside the module
+
+components-ts html css
+
+selector-used to dispalay the components
+@-----decorators
+
+decorators used to store meta data
+meta data = wrapped data
+
+create new component
+================
+ng generate component component name
+
+short- ng g c first
+
+
+in index.js only works root component
+we can call other sub  componemt in root component
+
+
+working cycle of angular component
+====================================
+
+constructor==>ngoninit==>other methods
+
+
+
+ts -component
+html-view
+
+
+
+data binding in angular
+======================
+ 1-one way binding
+ --------------------
+ 1.1  ts to html (component to view)
+    1.1.1  -- string interpollation  {{data}}
+    1.1.2  --- property binding      [property name]="data"
+
+    1.2 view to component(html to ts)
+    1.2.1-- event binding    (evevnt name)="method()"    
+    1.2.2   $evevnt binding    (evevnt)="method($event)"   --->login formilulla datats edukkan vendi ts ilekku
+    1.2.3    event binding with template rendering variable        use cheyyunna sign  ----- #variablename
+
+
+    2-two way binding---
+    ------------------
+
+    2.1 ngModel   [(ngmodel)]="variable"
+              -formsModule   -module used to apply ngModel
+
+
+
+   path setting in angular
+   =====================
+
+   path set in root module routing file 
+each page need defnt path
+landing page path is empty
+
+
+
+
+
+Redirection in angular
+-----------------------
+
+method -- navigateByUrl(path)
+class   -- Router
+module--- AppRoutingModule
+
+
+folder-- file -- class -- methods
+package   module 
+
+Dependency Injection
+======-----========
+
+to use a method of class in anothor class
+
+in constructor
+
+
+
+accessspecifire refrance:className
+
+
+
+
+access specifire -private/public
+        -private-can only use the injecting class only in the class
+
+        public -  can use the injecting class in other classesss of the file    
+
+
+
+
+        Angular services 
+
+        ==============
+
+        its a file in angular  
+        all componemt can access the content of service file 
+
+        -create a servicefile--   ng g s filename
+
+
+
+        Angular directives
+        ===================
+            used to manipulate DOM-document object module
+
+
+           1- component directives  
+           
+           2- structural directives--data collection vachh dom ne change cheyyumbo
+                -*ngFor
+                -*ngIf
+
+           3-  atribute directives
+                -[ngClass]
+
+
+
+
+
+           form valudation in angular
+           --------------------------------
+
+           1-template driven form
+           2-model driven form
+
+
+           model driven form
+           ====================
+
+           -reactive form
+           -ReactiveFormsModule  -MODULE used to build model form
+            -formbulder            -class used to build model form
+           - a model contain          -form group
+                                      -array
+                                      -controller
+
+local storage in angular
+=========-------------=========
+C-LOCALSTORAGE.setItem()
+R-LOCALSTORAGE.getItem()
+U-LOCALSTORAGE.setItem()
+D-LOCALSTORAGE.removeItem()
+
+child parenrt communication in Angular
+======================================
+parent to child data sharing 
+---------------------------
+@input()
+- decorator used to share data from parent to child
+
+child to parent data sharing
+----------------------------------
+
+
+
+date and time in angular
+=======================
+Date   - class used to current date data in  angular
+
+angular pipes
+================
+
+used to convert datats to anthor format
+
+
+
+
+
+
+
+
+event creation in angular (user difind events)
+==============================
+EventEmitter-  class used to create events
+emitt()-  method used  to specify when the event happen
+
+
+
+API Creation in angular
+------------------------------------------------------
+HttpClientModule  -module
+HttpClient        -class
+
+
+ method
+ ==================================================
+ get post put patch delete
+
+
+ asynchrones in js
+promise -then()
+          -catch()
+
+-------------------------------------------------
+
+  asynchrones in ts   rxjs (reactive extenction for js ) -liabrary
+
+     observable - subscribe()
+                 -catch()
+----------------------------------------------------------
+
+Header creation in angular
+======================================================
+
+HttpHeaders-class used to genarate Headers
+
+
+
+lazy loading
+=======================
+ng g module modulename --route modulename --module app.module
+
+
+tecnology used to create lazy module for faster loading of high traffic pages
+
+
+all product view
+single product view
+
+edit product
+delete product
+add new product
+
+
+json server 
+================================
+
+to run json files 
+npm i --save json server
+
+
+npx json server --watch filename --port 3000
+
+
+
+
+
+
+access params from navigateByUrl===
+================================
+
+ActivateRoute - class used to acess params 
+params - method used to access params 
+
+
+
+pipe creation in angular
+=======================
+ng g pipe pipename 
+
+transform(value,filterstring,propsname)
+value =pipe applying data 
+filterstring=keyword used to filter data
+propsname= filter applaying property in data
+
+data sharing from modue to module
+
+===========================================
+
+Behavior subject-rxjs(reactive extension for js )---rxjs class
+datas share cheyyan
+
+
+1. import behavior subject 
+2. create an object of behaviour subject
+3.send the data using next method
+4.access data using subscribe
